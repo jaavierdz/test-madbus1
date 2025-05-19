@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   const PASS_KEY = 'B7D0ED002990C2B5B1BCE474DDFE28A83A852B06A037063B8304B78307BEE93D8046A37C3BCC546AEA0E66152ABF3C625DFE642F0D78E79B4A0670252C17CFB2';
 
   try {
-    const response = await axios.post(
+    const response = await axios.get(
       'https://openapi.emtmadrid.es/v1/mobilitylabs/user/login/',
       {},
       {
