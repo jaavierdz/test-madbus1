@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await axios.get(
-      'https://openapi.emtmadrid.es/v1/mobilitylabs/user/login/',
+      'https://openapi.emtmadrid.es/v2/mobilitylabs/user/login/',
       {},
       {
         headers: {
