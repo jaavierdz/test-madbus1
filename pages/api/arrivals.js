@@ -28,15 +28,15 @@ export default async function handler(req, res) {
     // Construir URL arrivals según si line está o no
     let url = '';
     if (line) {
-      url = `https://openapi.emtmadrid.es/v2/transport/busemtmad/stops/${stopId}/arrives/${line}/`;
+      url = `https://openapi.emtmadrid.es/v2/busemtmad/stops/${stopId}/arrives/${line}/`;
     } else {
-      url = `https://openapi.emtmadrid.es/v1/transport/busemtmad/stops/arrives/`;
+      url = `https://openapi.emtmadrid.es/v1/busemtmad/stops/arrives/`;
     }
 
     // Si no line, POST con stopIds array
     let resp;
     if (line) {
-      resp = await axios.get(url, {
+      resp = await axios.post(url, {
         headers: { accessToken: token },
       });
     } else {
